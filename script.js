@@ -9,3 +9,12 @@ function PlayNote(event){
 function StopNote(){
     console.log('stop');
 }
+
+function TypeNote(note) {
+    console.log(note);
+}
+
+var buttons = document.getElementsByTagName('main');
+
+buttons.onclick = TypeNote('4-1');
+buttons.onmouseout = StopNote();
