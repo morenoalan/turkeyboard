@@ -1,3 +1,5 @@
+"use strict";
+
 const keys = document.getElementsByClassName('key');
 
 document.addEventListener('keydown', PlayNote);
@@ -15,6 +17,11 @@ function TypeNote(note) {
 }
 
 var buttons = document.getElementsByTagName('main');
+console.log(buttons);
 
 buttons.onclick = TypeNote('4-1');
 buttons.onmouseout = StopNote();
+
+buttons.addEventListener('click', async function onEvent(event){
+    await console.log('clicou');
+});
