@@ -16,12 +16,13 @@ function TypeNote(note) {
     console.log(note);
 }
 
-var buttons = document.getElementsByTagName('main');
+var buttons = document.getElementsByTagName('button');
 console.log(buttons);
 
-buttons.onclick = TypeNote('4-1');
+buttons[0].onmouseup = TypeNote('4-1');
+buttons[1].onclick = TypeNote('4-2');
 buttons.onmouseout = StopNote();
 
-buttons.addEventListener('click', async function onEvent(event){
-    await console.log('clicou');
+buttons.addEventListener('click', function onEvent(event){
+    console.log('clicou');
 });
