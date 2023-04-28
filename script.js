@@ -19,8 +19,7 @@ function TypeNote(note) {
 var buttons = document.getElementsByTagName('button');
 console.log(buttons);
 
-buttons[0].onmouseup = TypeNote('4-1');
-buttons[1].onclick = TypeNote('4-2');
+buttons.onclick = TypeNote('4-1');
 buttons.onmouseout = StopNote();
 
 buttons.addEventListener('click', function onEvent(event){
