@@ -8,20 +8,10 @@ function PlayNote(event){
     var keyName = event.key;
     console.log('play ' + keyName);
 }
-function StopNote(){
-    console.log('stop');
+function StopNote(note){
+    console.log('stop '+note.id);
 }
 
 function TypeNote(note) {
-    console.log(note);
+    console.log('play '+note.id);
 }
-
-var buttons = document.getElementsByTagName('button');
-console.log(buttons);
-
-buttons[0].onclick = TypeNote('4-1');
-buttons[0].onmouseout = StopNote();
-
-buttons.addEventListener('click', function onEvent(event){
-    console.log('clicou');
-});
