@@ -88,19 +88,19 @@ const heightNotes = [
 ];
 
 const keyboardNotes = [
-    {'nameNote' : 'A', 'numberNote' : '1'},
-    {'nameNote' : 'W', 'numberNote' : '2'},
-    {'nameNote' : 'S', 'numberNote' : '3'},
-    {'nameNote' : 'E', 'numberNote' : '4'},
-    {'nameNote' : 'D', 'numberNote' : '5'},
-    {'nameNote' : 'F', 'numberNote' : '6'},
-    {'nameNote' : 'T', 'numberNote' : '7'},
-    {'nameNote' : 'G', 'numberNote' : '8'},
-    {'nameNote' : 'Y', 'numberNote' : '9'},
-    {'nameNote' : 'H', 'numberNote' : '10'},
-    {'nameNote' : 'U', 'numberNote' : '11'},
-    {'nameNote' : 'J', 'numberNote' : '12'},
-    {'nameNote' : 'K', 'numberNote' : '13'}
+    {'nameNote' : 'A', 'numberNote' : '1', 'id': 'C-natural'},
+    {'nameNote' : 'W', 'numberNote' : '2', 'id': 'C-sharp'},
+    {'nameNote' : 'S', 'numberNote' : '3', 'id': 'D-natural'},
+    {'nameNote' : 'E', 'numberNote' : '4', 'id': 'D-sharp'},
+    {'nameNote' : 'D', 'numberNote' : '5', 'id': 'E-natural'},
+    {'nameNote' : 'F', 'numberNote' : '6', 'id': 'F-natural'},
+    {'nameNote' : 'T', 'numberNote' : '7', 'id': 'F-sharp'},
+    {'nameNote' : 'G', 'numberNote' : '8', 'id': 'G-natural'},
+    {'nameNote' : 'Y', 'numberNote' : '9', 'id': 'G-sharp'},
+    {'nameNote' : 'H', 'numberNote' : '10', 'id': 'A-natural'},
+    {'nameNote' : 'U', 'numberNote' : '11', 'id': 'A-sharp'},
+    {'nameNote' : 'J', 'numberNote' : '12', 'id': 'B-natural'},
+    {'nameNote' : 'K', 'numberNote' : '13', 'id': 'C-octave'}
 ] 
 
 const myAudioContext = new AudioContext();
@@ -159,15 +159,23 @@ function PlayNote(note){
 
     beep(200, playFrequency, 10);
 }
+
+function ActiveColor(idKey){
+    let noteKey = document.getElementById(idKey);
+    noteKey.style.backgroundColor = '#8787de';
+    noteKey.style.color = '#ffffff';
+    //setInterval();
+}
 function StopNote(note){
     console.log('stop '+ currentNote);
     currentNote = '';
 }
-
 function TypeNote(event) {
     let keyName = event.key.toUpperCase();
     let findValue = keyboardNotes.find(item => item.nameNote == keyName).numberNote;
     currentNote = findValue;
     let sendObject = {'value' : currentNote};
     PlayNote(sendObject);
+    let idKey = keyboardNotes.find(item => item.nameNote == keyName).id;
+    ActiveColor(idKey);
 }
