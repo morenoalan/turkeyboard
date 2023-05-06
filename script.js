@@ -146,7 +146,10 @@ const keys = document.getElementsByClassName('key');
 document.addEventListener('keydown', TypeNote);
 document.addEventListener('keyup', StopNote);
 
+var downNote = 0;
+
 function PlayNote(note){
+    downNote = 1;
     currentNote = note.value;
     let currentOctave = octave;
     if(currentNote == '13'){
@@ -167,6 +170,7 @@ function ActiveColor(idKey){
     //setInterval();
 }
 function StopNote(note){
+    downNote = 0;
     console.log('stop '+ currentNote);
     currentNote = '';
 }
@@ -178,4 +182,10 @@ function TypeNote(event) {
     PlayNote(sendObject);
     let idKey = keyboardNotes.find(item => item.nameNote == keyName).id;
     ActiveColor(idKey);
+}
+
+function Glissing(note){
+    if(downNote == 1){
+        PlayNote(note);
+    }
 }
