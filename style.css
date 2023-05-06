@@ -9,6 +9,7 @@
 }
 :root {
     --color-turkey: #8787de;
+    --color-dark-turkey: #505087;
     --color-white: #ffffff;
     --color-black: #000000;
     --color-white-key : #FFFFFF;
@@ -77,26 +78,35 @@ ul {
 .natural-key {
     width: 60px;
     height: 180px;
-    background-color: var(--color-white-key);
     border: 0.3px solid var(--color-gray-two);
+    background-color: var(--color-white-key);
     color: var(--color-black-key);
+}
+.natural-key-hover {
+    width: 60px;
+    height: 180px;
+    border: 0.3px solid var(--color-gray-two);
+    background-color: var(--color-turkey);
+    color: var(--color-white-key);
 }
 .sharp-key {
     width: 30px;
     height: 120px;
-    background-color: var(--color-black-key);
     border: none;
     transform-origin: top left;
     transform: translate(-15px, 0);
     margin-right: -30px;
+    background-color: var(--color-black-key);
     color: var(--color-white-key);
 }
-.natural-key:hover {
-    background-color: var(--color-turkey);
-    color: var(--color-white-key);
-}
-.sharp-key:hover {
-    background-color: #505087;
+.sharp-key-hover {
+    width: 30px;
+    height: 120px;
+    border: none;
+    transform-origin: top left;
+    transform: translate(-15px, 0);
+    margin-right: -30px;
+    background-color: var(--color-dark-turkey);
     color: var(--color-white-key);
 }
 

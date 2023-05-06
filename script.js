@@ -146,9 +146,28 @@ const keys = document.getElementsByClassName('key');
 document.addEventListener('keydown', TypeNote);
 document.addEventListener('keyup', StopNote);
 
-var downNote = 0;
+var noteKey;
+function TurnOffColor(){
+    noteKey.classList.remove('natural-key-hover');
+    noteKey.classList.add('natural-key');
+    /*
+    noteKey.style.setProperty('background-color', 'var(--color-white-key)');
+    noteKey.style.color = '#000000';
+    */
+}
+function TurnOnColor(idKey){
+    noteKey = document.getElementById(idKey);
+    noteKey.classList.remove('natural-key');
+    noteKey.classList.add('natural-key-hover');
+    /*
+    noteKey.style.setProperty('background-color', 'var(--color-turkey)');
+    noteKey.style.color = '#ffffff';
+    */
+    setTimeout(TurnOffColor, 200);
+}
 
-function PlayNote(note){
+var downNote = 0;
+function PlayNote(note, idKey){
     downNote = 1;
     currentNote = note.value;
     let currentOctave = octave;
@@ -159,15 +178,8 @@ function PlayNote(note){
     let octaveAndNote = currentOctave + '-' + currentNote;
     console.log(octave + '-' + currentNote);
     let playFrequency = heightNotes.find(item => item.height == octaveAndNote).frequency;
-
     beep(200, playFrequency, 10);
-}
-
-function ActiveColor(idKey){
-    let noteKey = document.getElementById(idKey);
-    noteKey.style.backgroundColor = '#8787de';
-    noteKey.style.color = '#ffffff';
-    //setInterval();
+    TurnOnColor(idKey);
 }
 function StopNote(note){
     downNote = 0;
@@ -179,11 +191,9 @@ function TypeNote(event) {
     let findValue = keyboardNotes.find(item => item.nameNote == keyName).numberNote;
     currentNote = findValue;
     let sendObject = {'value' : currentNote};
-    PlayNote(sendObject);
     let idKey = keyboardNotes.find(item => item.nameNote == keyName).id;
-    ActiveColor(idKey);
+    PlayNote(sendObject, idKey);
 }
-
 function Glissing(note){
     if(downNote == 1){
         PlayNote(note);
