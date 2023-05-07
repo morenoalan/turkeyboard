@@ -108,7 +108,7 @@ function beep(duration, frequency, volume){
     return new Promise((resolve, reject) => {
         duration = duration || 200;
         frequency = frequency || 440;
-        volume = volume || 100;
+        volume = volume || 10;
         try{
             let oscillatorNode = myAudioContext.createOscillator();
             let gainNode = myAudioContext.createGain();
@@ -150,19 +150,11 @@ var noteKey;
 function TurnOffColor(){
     noteKey.classList.remove('natural-key-hover');
     noteKey.classList.add('natural-key');
-    /*
-    noteKey.style.setProperty('background-color', 'var(--color-white-key)');
-    noteKey.style.color = '#000000';
-    */
 }
 function TurnOnColor(idKey){
     noteKey = document.getElementById(idKey);
     noteKey.classList.remove('natural-key');
     noteKey.classList.add('natural-key-hover');
-    /*
-    noteKey.style.setProperty('background-color', 'var(--color-turkey)');
-    noteKey.style.color = '#ffffff';
-    */
     setTimeout(TurnOffColor, 200);
 }
 
@@ -198,4 +190,7 @@ function Glissing(note){
     if(downNote == 1){
         PlayNote(note);
     }
+}
+function Deglissing(){
+    downNote = 0;
 }
