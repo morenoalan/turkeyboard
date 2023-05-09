@@ -145,6 +145,9 @@ const keys = document.getElementsByClassName('key');
 
 document.addEventListener('keydown', TypeNote);
 document.addEventListener('keyup', StopNote);
+document.addEventListener("touchstart", TouchStart);
+document.addEventListener("touchmove", TouchMove);
+document.addEventListener("touchend", StopNote);
 
 var noteKey;
 function TurnOffColor(){
@@ -173,7 +176,7 @@ function PlayNote(note, idKey){
     beep(200, playFrequency, 10);
     TurnOnColor(idKey);
 }
-function StopNote(note){
+function StopNote(){
     downNote = 0;
     console.log('stop '+ currentNote);
     currentNote = '';
@@ -193,4 +196,11 @@ function Glissing(note){
 }
 function Deglissing(){
     downNote = 0;
+}
+
+function TouchStart(){
+
+}
+function TouchMove(){
+    
 }
