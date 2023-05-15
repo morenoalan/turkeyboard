@@ -73,18 +73,18 @@ const heightNotes = [
     {'height': '6-10', 'frequency': '1760'},
     {'height': '6-11', 'frequency': '1864'},
     {'height': '6-12', 'frequency': '1976'},
-    {'height': '7-1', 'frequency': ''},
-    {'height': '7-2', 'frequency': ''},
-    {'height': '7-3', 'frequency': ''},
-    {'height': '7-4', 'frequency': ''},
-    {'height': '7-5', 'frequency': ''},
-    {'height': '7-6', 'frequency': ''},
-    {'height': '7-7', 'frequency': ''},
-    {'height': '7-8', 'frequency': ''},
-    {'height': '7-9', 'frequency': ''},
-    {'height': '7-10', 'frequency': ''},
-    {'height': '7-11', 'frequency': ''},
-    {'height': '7-12', 'frequency': ''}
+    {'height': '7-1', 'frequency': '2096'},
+    {'height': '7-2', 'frequency': '2216'},
+    {'height': '7-3', 'frequency': '2352'},
+    {'height': '7-4', 'frequency': '2496'},
+    {'height': '7-5', 'frequency': '2640'},
+    {'height': '7-6', 'frequency': '2800'},
+    {'height': '7-7', 'frequency': '2960'},
+    {'height': '7-8', 'frequency': '3136'},
+    {'height': '7-9', 'frequency': '3328'},
+    {'height': '7-10', 'frequency': '3520'},
+    {'height': '7-11', 'frequency': '3728'},
+    {'height': '7-12', 'frequency': '3932'}
 ];
 
 const keyboardNotes = [
