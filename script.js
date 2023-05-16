@@ -146,6 +146,14 @@ const keys = document.getElementsByClassName('key');
 document.addEventListener('keydown', TypeNote);
 document.addEventListener('keyup', StopNote);
 
+if('ontouchstart' in window) {
+    for(let i = 0; i < keys.length; i++){
+        keys[i].removeAttribute('onmousedown');
+        keys[i].removeAttribute('onmouseup');
+        keys[i].removeAttribute('onmouseover');
+    }
+}
+
 var noteKey;
 function TurnOffColor(){
     noteKey.classList.remove('natural-key-hover');
