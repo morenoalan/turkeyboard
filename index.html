@@ -27,7 +27,30 @@
     <h1>Turkeyboard</h1>
     </header>
     <main>
-        <ul id='octave' onmouseleave='Deglissing()'>
+        <ul id='all-octaves'>
+            <li>
+                <button class='octaves' value='1'>1</button>
+            </li>
+            <li>
+                <button class='octaves' value='2'>2</button>
+            </li>
+            <li>
+                <button class='octaves' value='3'>3</button>
+            </li>
+            <li>
+                <button class='octaves' value='4'>4</button>
+            </li>
+            <li>
+                <button class='octaves' value='5'>5</button>
+            </li>
+            <li>
+                <button class='octaves' value='6'>6</button>
+            </li>
+            <li>
+                <button class='octaves' value='7'>7</button>
+            </li>
+        </ul>
+        <ul id='one-octave' onmouseleave='Deglissing()'>
             <li>
                 <button id='C-natural' class='key natural-key' onmousedown='PlayNote(this)' onmouseup='StopNote(this)' onmouseover='Glissing(this)' ontouchstart='PlayNote(this)' ontouchend='StopNote(this)' ontouchmove='Glissing(this)' value='1'>A</button>
             </li>
