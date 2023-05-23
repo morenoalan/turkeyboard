@@ -98,13 +98,12 @@ ul {
     width: 60px;
     height: 180px;
     border: 0.3px solid var(--color-gray-two);
+}
+.natural-key-color {
     background-color: var(--color-white-key);
     color: var(--color-black-key);
 }
-.natural-key-hover {
-    width: 60px;
-    height: 180px;
-    border: 0.3px solid var(--color-gray-two);
+.natural-key-color-hover {
     background-color: var(--color-turkey);
     color: var(--color-white-key);
 }

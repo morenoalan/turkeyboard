@@ -156,13 +156,13 @@ if('ontouchstart' in window) {
 
 var noteKey;
 function TurnOffColor(){
-    noteKey.classList.remove('natural-key-hover');
-    noteKey.classList.add('natural-key');
+    noteKey.classList.remove('natural-key-color-hover');
+    noteKey.classList.add('natural-key-color');
 }
 function TurnOnColor(idKey){
     noteKey = document.getElementById(idKey);
-    noteKey.classList.remove('natural-key');
-    noteKey.classList.add('natural-key-hover');
+    noteKey.classList.remove('natural-key-color');
+    noteKey.classList.add('natural-key-color-hover');
     setTimeout(TurnOffColor, 200);
 }
 
