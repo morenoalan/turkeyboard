@@ -114,16 +114,12 @@ ul {
     transform-origin: top left;
     transform: translate(-15px, 0);
     margin-right: -30px;
+}
+.sharp-key-color{
     background-color: var(--color-black-key);
     color: var(--color-white-key);
 }
-.sharp-key-hover {
-    width: 30px;
-    height: 120px;
-    border: none;
-    transform-origin: top left;
-    transform: translate(-15px, 0);
-    margin-right: -30px;
+.sharp-key-color-hover {
     background-color: var(--color-dark-turkey);
     color: var(--color-white-key);
 }
