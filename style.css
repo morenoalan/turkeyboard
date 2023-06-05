@@ -72,6 +72,7 @@ ul {
     padding-bottom: 8px;
 }
 .octaves {
+    cursor: pointer;
     width: 60px;
     height: 20px;
     border-radius: 8px;
