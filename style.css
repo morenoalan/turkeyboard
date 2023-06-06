@@ -81,9 +81,13 @@ ul {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
 }
-.octave-key-color{
+.octave-key-color {
     background-color: var(--color-white-key);
     color: var(--color-black-key);
+}
+.octave-key-color-hover {
+    background-color: var(--color-turkey);
+    color: var(--color-white-key);
 }
 .key {
     border-radius: 0 0 8px 8px;
