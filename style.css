@@ -77,11 +77,13 @@ ul {
     height: 20px;
     border-radius: 8px;
     border: 0.3px solid var(--color-gray-two);
-    background-color: var(--color-white-key);
-    color: var(--color-black-key);
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+}
+.octave-key-color{
+    background-color: var(--color-white-key);
+    color: var(--color-black-key);
 }
 .key {
     border-radius: 0 0 8px 8px;
