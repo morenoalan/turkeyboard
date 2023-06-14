@@ -35,12 +35,11 @@ body {
 }
 header {
     width: var(--max-width);
-    padding: 10px 0 20px 0;
 }
-nav > ul {
+nav {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     font-weight: 700;
@@ -56,7 +55,10 @@ nav button {
     background-color: var(--color-white-key);
     color: var(--color-black-key);
 }
-h1 {
+figure  {
+    padding: 10px 0 20px 0;
+}
+figcaption {
     font-family: 'Unica One', cursive;
     font-size: 30px;
     color: var(--color-black);
