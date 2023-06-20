@@ -202,3 +202,15 @@ function Glissing(note){
 function Deglissing(){
     downNote = 0;
 }
+
+var ModeCurrent = 'light';
+
+function ChangeMode(){
+    if(ModeCurrent == 'light'){
+        ModeCurrent = 'dark';
+        document.getElementById('body').style.backgroundColor = '#505087';
+    }else if(ModeCurrent == 'dark'){
+        ModeCurrent = 'light';
+        document.getElementById('body').style.backgroundColor = 'white';
+    }
+}
