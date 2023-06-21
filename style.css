@@ -53,7 +53,13 @@ nav button {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     background-color: transparent;
+    color: inherit;
+}
+.nav-button-light {
     color: var(--color-black-key);
+}
+.nav-button-dark {
+    color: var(--color-white-key);
 }
 figure  {
     padding: 10px 0 20px 0;

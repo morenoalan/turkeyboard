@@ -205,12 +205,16 @@ function Deglissing(){
 
 var ModeCurrent = 'light';
 
-function ChangeMode(){
+function ChangeTheme(){
     if(ModeCurrent == 'light'){
         ModeCurrent = 'dark';
         document.getElementById('body').style.backgroundColor = '#505087';
+        document.getElementById('header-nav').classList.remove('nav-button-light');
+        document.getElementById('header-nav').classList.add('nav-button-dark');
     }else if(ModeCurrent == 'dark'){
         ModeCurrent = 'light';
         document.getElementById('body').style.backgroundColor = 'white';
+        document.getElementById('header-nav').classList.remove('nav-button-dark');
+        document.getElementById('header-nav').classList.add('nav-button-light');
     }
 }
