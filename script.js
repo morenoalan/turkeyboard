@@ -1,21 +1,21 @@
 'use strict';
 
 const heightNotes = [
-    {'height': '1-1', 'frequency': '32,75'},
-    {'height': '1-2', 'frequency': '34,67'},
-    {'height': '1-3', 'frequency': '36,75'},
+    {'height': '1-1', 'frequency': '32.75'},
+    {'height': '1-2', 'frequency': '34.67'},
+    {'height': '1-3', 'frequency': '36.75'},
     {'height': '1-4', 'frequency': '39'},
-    {'height': '1-5', 'frequency': '41,5'},
+    {'height': '1-5', 'frequency': '41.5'},
     {'height': '1-6', 'frequency': '44'},
-    {'height': '1-7', 'frequency': '46,5'},
+    {'height': '1-7', 'frequency': '46.5'},
     {'height': '1-8', 'frequency': '49'},
     {'height': '1-9', 'frequency': '52'},
     {'height': '1-10', 'frequency': '55'},
-    {'height': '1-11', 'frequency': '58,25'},
-    {'height': '1-12', 'frequency': '61,75'},
-    {'height': '2-1', 'frequency': '65,5'},
-    {'height': '2-2', 'frequency': '69,25'},
-    {'height': '2-3', 'frequency': '73,5'},
+    {'height': '1-11', 'frequency': '58.25'},
+    {'height': '1-12', 'frequency': '61.75'},
+    {'height': '2-1', 'frequency': '65.5'},
+    {'height': '2-2', 'frequency': '69.25'},
+    {'height': '2-3', 'frequency': '73.5'},
     {'height': '2-4', 'frequency': '78'},
     {'height': '2-5', 'frequency': '83'},
     {'height': '2-6', 'frequency': '88'},
@@ -23,10 +23,10 @@ const heightNotes = [
     {'height': '2-8', 'frequency': '98'},
     {'height': '2-9', 'frequency': '104'},
     {'height': '2-10', 'frequency': '110'},
-    {'height': '2-11', 'frequency': '116,5'},
-    {'height': '2-12', 'frequency': '123,5'},
+    {'height': '2-11', 'frequency': '116.5'},
+    {'height': '2-12', 'frequency': '123.5'},
     {'height': '3-1', 'frequency': '131'},
-    {'height': '3-2', 'frequency': '138,5'},
+    {'height': '3-2', 'frequency': '138.5'},
     {'height': '3-3', 'frequency': '147'},
     {'height': '3-4', 'frequency': '156'},
     {'height': '3-5', 'frequency': '165'},
@@ -201,6 +201,10 @@ function Glissing(note){
 }
 function Deglissing(){
     downNote = 0;
+}
+
+function ChangeOctave(newOctave){
+    octave = newOctave.value;
 }
 
 var ModeCurrent = 'light';
