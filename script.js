@@ -84,7 +84,8 @@ const heightNotes = [
     {'height': '7-9', 'frequency': '3328'},
     {'height': '7-10', 'frequency': '3520'},
     {'height': '7-11', 'frequency': '3728'},
-    {'height': '7-12', 'frequency': '3932'}
+    {'height': '7-12', 'frequency': '3932'},
+    {'height': '8-1', 'frequency': '4192'}
 ];
 
 const keyboardNotes = [
@@ -154,6 +155,10 @@ if('ontouchstart' in window) {
     }
 }
 
+function ChangeOctave(newOctave){
+    octave = Number(newOctave.value);
+}
+
 var noteKey;
 function TurnOffColor(){
     noteKey.classList.remove('natural-key-color-hover');
@@ -176,7 +181,7 @@ function PlayNote(note, idKey){
         currentNote = '1';
     }
     let octaveAndNote = currentOctave + '-' + currentNote;
-    console.log(octave + '-' + currentNote);
+    console.log(octaveAndNote);
     let playFrequency = heightNotes.find(item => item.height == octaveAndNote).frequency;
     beep(200, playFrequency, 10);
     TurnOnColor(idKey);
@@ -201,10 +206,6 @@ function Glissing(note){
 }
 function Deglissing(){
     downNote = 0;
-}
-
-function ChangeOctave(newOctave){
-    octave = newOctave.value;
 }
 
 var ModeCurrent = 'light';
