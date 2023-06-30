@@ -223,3 +223,7 @@ function ChangeTheme(){
         document.getElementById('header-nav').classList.add('nav-button-light');
     }
 }
+
+function ShowInfo(){
+    console.log('show-info');
+}
