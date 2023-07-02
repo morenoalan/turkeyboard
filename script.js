@@ -227,3 +227,7 @@ function ChangeTheme(){
 function ShowInfo(){
     console.log('show-info');
 }
+
+function OpenMenu(){
+    console.log('open-menu');
+}
