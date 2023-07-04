@@ -226,6 +226,7 @@ function ChangeTheme(){
 
 function ShowInfo(){
     console.log('show-info');
+    document.getElementById('div-info').classList.remove('display-none')
 }
 
 function OpenMenu(){
