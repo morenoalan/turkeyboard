@@ -233,4 +233,5 @@ function ShowInfo(){
 function OpenMenu(){
     console.log('open-menu');
     document.getElementById('div-menu').classList.remove('display-none');
+    document.getElementById('div-info').classList.add('display-none');
 }
