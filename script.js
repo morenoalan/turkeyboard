@@ -89,6 +89,13 @@ const heightNotes = [
 ];
 
 const keyboardNotes = [
+    {'nameNote' : '1', 'numberNote' : '', 'id': 'scale-1'},
+    {'nameNote' : '2', 'numberNote' : '', 'id': 'scale-2'},
+    {'nameNote' : '3', 'numberNote' : '', 'id': 'scale-3'},
+    {'nameNote' : '4', 'numberNote' : '', 'id': 'scale-4'},
+    {'nameNote' : '5', 'numberNote' : '', 'id': 'scale-5'},
+    {'nameNote' : '6', 'numberNote' : '', 'id': 'scale-6'},
+    {'nameNote' : '7', 'numberNote' : '', 'id': 'scale-7'},
     {'nameNote' : 'A', 'numberNote' : '1', 'id': 'C-natural'},
     {'nameNote' : 'W', 'numberNote' : '2', 'id': 'C-sharp'},
     {'nameNote' : 'S', 'numberNote' : '3', 'id': 'D-natural'},
