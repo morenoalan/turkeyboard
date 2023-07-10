@@ -162,8 +162,12 @@ if('ontouchstart' in window) {
     }
 }
 
-function ChangeOctave(newOctave){
-    octave = Number(newOctave.value);
+function ChangeOctave(newOctave, method){
+    if(method == 'keyboard'){
+        octave = Number(newOctave);
+    }else{
+        octave = Number(newOctave.value);
+    }
 }
 
 var noteKey;
@@ -200,11 +204,15 @@ function StopNote(){
 }
 function TypeNote(event) {
     let keyName = event.key.toUpperCase();
-    let findValue = keyboardNotes.find(item => item.nameNote == keyName).numberNote;
-    currentNote = findValue;
-    let sendObject = {'value' : currentNote};
-    let idKey = keyboardNotes.find(item => item.nameNote == keyName).id;
-    PlayNote(sendObject, idKey);
+    if(!isNaN(keyName)){
+        ChangeOctave(keyName, 'keyboard');
+    }else{
+        let findValue = keyboardNotes.find(item => item.nameNote == keyName).numberNote;
+        currentNote = findValue;
+        let sendObject = {'value' : currentNote};
+        let idKey = keyboardNotes.find(item => item.nameNote == keyName).id;
+        PlayNote(sendObject, idKey);
+    }
 }
 function Glissing(note){
     if(downNote == 1){
