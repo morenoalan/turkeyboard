@@ -57,12 +57,7 @@ const heightNotes = [
     {'height': '5-6', 'frequency': '700'},
     {'height': '5-7', 'frequency': '740'},
     {'height': '5-8', 'frequency': '784'},
-    {'height': '5-9', 'frequency': '832'},
-    {'height': '5-10', 'frequency': '880'},
-    {'height': '5-11', 'frequency': '932'},
-    {'height': '5-12', 'frequency': '988'},
-    {'height': '6-1', 'frequency': '1048'},
-    {'height': '6-2', 'frequency': '1108'},
+    {'height': '5-9', 'frequency⁷6-2', 'frequency': '1108'},
     {'height': '6-3', 'frequency': '1176'},
     {'height': '6-4', 'frequency': '1248'},
     {'height': '6-5', 'frequency': '1320'},
@@ -199,7 +194,7 @@ function PlayNote(note, idKey){
 }
 function StopNote(){
     downNote = 0;
-    console.log('stop '+ currentNote);
+    //console.log('stop '+ currentNote);
     currentNote = '';
 }
 function TypeNote(event) {
