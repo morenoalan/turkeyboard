@@ -187,7 +187,7 @@ function PlayNote(note, idKey){
         currentNote = '1';
     }
     let octaveAndNote = currentOctave + '-' + currentNote;
-    console.log(octaveAndNote);
+    //console.log(octaveAndNote);
     let playFrequency = heightNotes.find(item => item.height == octaveAndNote).frequency;
     beep(200, playFrequency, 10);
     TurnOnColor(idKey);
