@@ -109,7 +109,7 @@ const keyboardNotes = [
     {'nameNote' : 'U', 'numberNote' : '11', 'id': 'A-sharp'},
     {'nameNote' : 'J', 'numberNote' : '12', 'id': 'B-natural'},
     {'nameNote' : 'K', 'numberNote' : '13', 'id': 'C-octave'}
-] 
+];
 
 const myAudioContext = new AudioContext();
 function beep(duration, frequency, volume){
