@@ -172,13 +172,23 @@ function ChangeOctave(newOctave, method){
 
 var noteKey;
 function TurnOffColor(){
-    noteKey.classList.remove('natural-key-color-hover');
-    noteKey.classList.add('natural-key-color');
+    if(noteKey.classList.contains('natural-key')==true){
+        noteKey.classList.remove('natural-key-color-hover');
+        noteKey.classList.add('natural-key-color');
+    }else if(noteKey.classList.contains('sharp-key')==true){
+        noteKey.classList.remove('sharp-key-color-hover');
+        noteKey.classList.add('sharp-key-color');
+    }
 }
 function TurnOnColor(idKey){
     noteKey = document.getElementById(idKey);
-    noteKey.classList.remove('natural-key-color');
-    noteKey.classList.add('natural-key-color-hover');
+    if(noteKey.classList.contains('natural-key')==true){
+        noteKey.classList.remove('natural-key-color');
+        noteKey.classList.add('natural-key-color-hover');
+    }else if(noteKey.classList.contains('sharp-key')==true){
+        noteKey.classList.remove('sharp-key-color');
+        noteKey.classList.add('sharp-key-color-hover');
+    }
     setTimeout(TurnOffColor, 200);
 }
 
