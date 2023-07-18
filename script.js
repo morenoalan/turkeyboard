@@ -178,6 +178,9 @@ function TurnOffColor(){
     }else if(noteKey.classList.contains('sharp-key')==true){
         noteKey.classList.remove('sharp-key-color-hover');
         noteKey.classList.add('sharp-key-color');
+    }else if(noteKey.classList.contains('octaves')==true){
+        noteKey.classList.remove('octave-key-color-hover');
+        noteKey.classList.add('octave-key-color');
     }
 }
 function TurnOnColor(idKey){
@@ -188,6 +191,9 @@ function TurnOnColor(idKey){
     }else if(noteKey.classList.contains('sharp-key')==true){
         noteKey.classList.remove('sharp-key-color');
         noteKey.classList.add('sharp-key-color-hover');
+    }else if(noteKey.classList.contains('octaves')==true){
+        noteKey.classList.remove('octave-key-color');
+        noteKey.classList.add('octave-key-color-hover');
     }
     setTimeout(TurnOffColor, 200);
 }
