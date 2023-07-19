@@ -230,9 +230,9 @@ function TypeNote(event) {
         PlayNote(sendObject, idKey);
     }
 }
-function Glissing(note){
+function Glissing(note, idkey){
     if(downNote == 1){
-        PlayNote(note);
+        PlayNote(note, idkey);
     }
 }
 function Deglissing(){
