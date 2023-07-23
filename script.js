@@ -89,13 +89,13 @@ const heightNotes = [
 ];
 
 const keyboardNotes = [
-    {'nameNote' : '1', 'numberNote' : '', 'id': 'scale-1'},
-    {'nameNote' : '2', 'numberNote' : '', 'id': 'scale-2'},
-    {'nameNote' : '3', 'numberNote' : '', 'id': 'scale-3'},
-    {'nameNote' : '4', 'numberNote' : '', 'id': 'scale-4'},
-    {'nameNote' : '5', 'numberNote' : '', 'id': 'scale-5'},
-    {'nameNote' : '6', 'numberNote' : '', 'id': 'scale-6'},
-    {'nameNote' : '7', 'numberNote' : '', 'id': 'scale-7'},
+    {'nameNote' : '1', 'numberNote' : '', 'id': 'octave-1'},
+    {'nameNote' : '2', 'numberNote' : '', 'id': 'octave-2'},
+    {'nameNote' : '3', 'numberNote' : '', 'id': 'octave-3'},
+    {'nameNote' : '4', 'numberNote' : '', 'id': 'octave-4'},
+    {'nameNote' : '5', 'numberNote' : '', 'id': 'octave-5'},
+    {'nameNote' : '6', 'numberNote' : '', 'id': 'octave-6'},
+    {'nameNote' : '7', 'numberNote' : '', 'id': 'octave-7'},
     {'nameNote' : 'A', 'numberNote' : '1', 'id': 'C-natural'},
     {'nameNote' : 'W', 'numberNote' : '2', 'id': 'C-sharp'},
     {'nameNote' : 'S', 'numberNote' : '3', 'id': 'D-natural'},
@@ -162,14 +162,6 @@ if('ontouchstart' in window) {
     }
 }
 
-function ChangeOctave(newOctave, method){
-    if(method == 'keyboard'){
-        octave = Number(newOctave);
-    }else{
-        octave = Number(newOctave.value);
-    }
-}
-
 var noteKey;
 function TurnOffColor(){
     if(noteKey.classList.contains('natural-key')==true){
@@ -219,10 +211,21 @@ function StopNote(){
     console.log('stop '+ currentNote);
     currentNote = '';
 }
+
+function ChangeOctave(newOctave, idKey, method){
+    if(method == 'keyboard'){
+        octave = Number(newOctave);
+    }else{
+        octave = Number(newOctave.value);
+    }
+    TurnOnColor(idKey);
+}
+
 function TypeNote(event) {
     let keyName = event.key.toUpperCase();
     if(!isNaN(keyName)){
-        ChangeOctave(keyName, 'keyboard');
+        let idKey = keyboardNotes.find(item => item.nameNote == keyName).id;
+        ChangeOctave(keyName, idKey, 'keyboard');
     }else{
         let findValue = keyboardNotes.find(item => item.nameNote == keyName).numberNote;
         currentNote = findValue;
