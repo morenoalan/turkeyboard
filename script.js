@@ -171,7 +171,6 @@ function TurnOffColor(){
         noteKey.classList.remove('sharp-key-color-hover');
         noteKey.classList.add('sharp-key-color');
     }else if(noteKey.classList.contains('octaves')==true){
-        //it is not working
         noteKey.classList.remove('octave-key-color-hover');
         noteKey.classList.add('octave-key-color');
     }
