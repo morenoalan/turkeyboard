@@ -269,3 +269,5 @@ function OpenMenu(){
     document.getElementById('div-menu').classList.remove('display-none');
     document.getElementById('div-info').classList.add('display-none');
 }
+
+//creating timeline
