@@ -171,10 +171,13 @@ function TurnOffColor(){
         noteKey.classList.remove('sharp-key-color-hover');
         noteKey.classList.add('sharp-key-color');
     }else if(noteKey.classList.contains('octaves')==true){
+        /*
         noteKey.classList.remove('octave-key-color-hover');
         noteKey.classList.add('octave-key-color');
+        */
     }
 }
+var pressedOctaveKey = document.getElementById('octave-4');
 function TurnOnColor(idKey){
     noteKey = document.getElementById(idKey);
     if(noteKey.classList.contains('natural-key')==true){
@@ -184,8 +187,11 @@ function TurnOnColor(idKey){
         noteKey.classList.remove('sharp-key-color');
         noteKey.classList.add('sharp-key-color-hover');
     }else if(noteKey.classList.contains('octaves')==true){
+        pressedOctaveKey.classList.remove('octave-key-color-hover');
+        pressedOctaveKey.classList.add('octave-key-color');
         noteKey.classList.remove('octave-key-color');
         noteKey.classList.add('octave-key-color-hover');
+        pressedOctaveKey = noteKey;
     }
     setTimeout(TurnOffColor, 200);
 }
