@@ -277,3 +277,4 @@ function OpenMenu(){
 }
 
 //creating timeline
+var timeline;
