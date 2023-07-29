@@ -111,6 +111,7 @@ const keyboardNotes = [
     {'nameNote' : 'K', 'numberNote' : '13', 'id': 'C-octave'}
 ];
 
+var oscillatorNode;
 const myAudioContext = new AudioContext();
 function beep(duration, frequency, volume){
     return new Promise((resolve, reject) => {
@@ -118,7 +119,7 @@ function beep(duration, frequency, volume){
         frequency = frequency || 440;
         volume = volume || 10;
         try{
-            let oscillatorNode = myAudioContext.createOscillator();
+            oscillatorNode = myAudioContext.createOscillator();
             let gainNode = myAudioContext.createGain();
             oscillatorNode.connect(gainNode);
 
@@ -134,7 +135,7 @@ function beep(duration, frequency, volume){
 
             // Start audio with the desired duration
             oscillatorNode.start(myAudioContext.currentTime);
-            oscillatorNode.stop(myAudioContext.currentTime + duration * 0.001);
+            //oscillatorNode.stop(myAudioContext.currentTime + duration * 0.001);
 
             // Resolve the promise when the sound is finished
             oscillatorNode.onended = () => {
@@ -212,6 +213,7 @@ function PlayNote(note, idKey){
     TurnOnColor(idKey);
 }
 function StopNote(){
+    oscillatorNode.stop();
     downNote = 0;
     console.log('stop '+ currentNote);
     currentNote = '';
@@ -240,12 +242,14 @@ function TypeNote(event) {
     }
 }
 function Glissing(note, idkey){
+    oscillatorNode.stop();
     if(downNote == 1){
         PlayNote(note, idkey);
     }
 }
 function Deglissing(){
     downNote = 0;
+    oscillatorNode.stop();
 }
 
 var ModeCurrent = 'light';
