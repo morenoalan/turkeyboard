@@ -282,3 +282,6 @@ function OpenMenu(){
 
 //creating timeline
 var timeline;
+
+function countTime(){
+}
