@@ -153,7 +153,7 @@ var currentNote = '';
 const keys = document.getElementsByClassName('key');
 
 document.addEventListener('keydown', TypeNote);
-document.addEventListener('keyup', StopNote);
+document.addEventListener('keyup', StopType);
 
 if('ontouchstart' in window) {
     for(let i = 0; i < keys.length; i++){
@@ -164,7 +164,8 @@ if('ontouchstart' in window) {
 }
 
 var noteKey;
-function TurnOffColor(){
+function TurnOffColor(idKey){
+    noteKey = document.getElementById(idKey);
     if(noteKey.classList.contains('natural-key')==true){
         noteKey.classList.remove('natural-key-color-hover');
         noteKey.classList.add('natural-key-color');
@@ -194,11 +195,12 @@ function TurnOnColor(idKey){
         noteKey.classList.add('octave-key-color-hover');
         pressedOctaveKey = noteKey;
     }
-    setTimeout(TurnOffColor, 200);
+    //setTimeout(TurnOffColor, 200);
 }
 
 var downNote = 0;
 function PlayNote(note, idKey){
+    console.log("playnote");
     downNote = 1;
     currentNote = note.value;
     let currentOctave = octave;
@@ -212,11 +214,12 @@ function PlayNote(note, idKey){
     beep(200, playFrequency, 10);
     TurnOnColor(idKey);
 }
-function StopNote(){
+function StopNote(idKey){
     oscillatorNode.stop();
     downNote = 0;
     console.log('stop '+ currentNote);
     currentNote = '';
+    TurnOffColor(idKey);
 }
 
 function ChangeOctave(newOctave, idKey, method){
@@ -235,21 +238,30 @@ function TypeNote(event) {
         ChangeOctave(keyName, idKey, 'keyboard');
     }else{
         let findValue = keyboardNotes.find(item => item.nameNote == keyName).numberNote;
-        currentNote = findValue;
-        let sendObject = {'value' : currentNote};
-        let idKey = keyboardNotes.find(item => item.nameNote == keyName).id;
-        PlayNote(sendObject, idKey);
+        if(currentNote != findValue){
+            currentNote = findValue;
+            let sendObject = {'value' : currentNote};
+            let idKey = keyboardNotes.find(item => item.nameNote == keyName).id;
+            PlayNote(sendObject, idKey);
+        }
     }
 }
-function Glissing(note, idkey){
+function StopType(event) {
+    let keyName = event.key.toUpperCase();
+    let idKey = keyboardNotes.find(item => item.nameNote == keyName).id;
+    StopNote(idKey);
+}
+function Glissing(note, idKey){
+    console.log('deglissing');
     oscillatorNode.stop();
     if(downNote == 1){
-        PlayNote(note, idkey);
+        PlayNote(note, idKey);
     }
 }
-function Deglissing(){
-    downNote = 0;
+function Deglissing(idKey){
+    //downNote = 0;
     oscillatorNode.stop();
+    StopNote(idKey);
 }
 
 var ModeCurrent = 'light';

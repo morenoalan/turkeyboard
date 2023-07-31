@@ -42,66 +42,66 @@
     <main id='main'>
         <ul id='all-octaves'>
             <li>
-                <button id='octave-1' class='octaves octave-key-color' onmousedown='ChangeOctave(this, this.id, "mouse")' onmouseup='StopNote(this)' ontouchstart='PlayNote(this, this.id, "touch")' ontouchend='StopNote(this)' value='1'>1</button>
+                <button id='octave-1' class='octaves octave-key-color' onmousedown='ChangeOctave(this, this.id, "mouse")' onmouseup='StopNote(this.id)' ontouchstart='PlayNote(this, this.id, "touch")' ontouchend='StopNote(this.id)' value='1'>1</button>
             </li>
             <li>
-                <button id='octave-2' class='octaves octave-key-color' onmousedown='ChangeOctave(this, this.id, "mouse")' onmouseup='StopNote(this)' ontouchstart='PlayNote(this, this.id, "touch")' ontouchend='StopNote(this)' value='2'>2</button>
+                <button id='octave-2' class='octaves octave-key-color' onmousedown='ChangeOctave(this, this.id, "mouse")' onmouseup='StopNote(this.id)' ontouchstart='PlayNote(this, this.id, "touch")' ontouchend='StopNote(this.id)' value='2'>2</button>
             </li>
             <li>
-                <button id='octave-3' class='octaves octave-key-color' onmousedown='ChangeOctave(this, this.id, "mouse")' onmouseup='StopNote(this)' ontouchstart='PlayNote(this, this.id, "touch")' ontouchend='StopNote(this)' value='3'>3</button>
+                <button id='octave-3' class='octaves octave-key-color' onmousedown='ChangeOctave(this, this.id, "mouse")' onmouseup='StopNote(this.id)' ontouchstart='PlayNote(this, this.id, "touch")' ontouchend='StopNote(this.id)' value='3'>3</button>
             </li>
             <li>
-                <button id='octave-4' class='octaves octave-key-color-hover' onmousedown='ChangeOctave(this, this.id, "mouse")' onmouseup='StopNote(this)' ontouchstart='PlayNote(this, this.id, "touch")' ontouchend='StopNote(this)' value='4'>4</button>
+                <button id='octave-4' class='octaves octave-key-color-hover' onmousedown='ChangeOctave(this, this.id, "mouse")' onmouseup='StopNote(this.id)' ontouchstart='PlayNote(this, this.id, "touch")' ontouchend='StopNote(this.id)' value='4'>4</button>
             </li>
             <li>
-                <button id='octave-5' class='octaves octave-key-color' onmousedown='ChangeOctave(this, this.id, "mouse")' onmouseup='StopNote(this)' ontouchstart='PlayNote(this, this.id, "touch")' ontouchend='StopNote(this)' value='5'>5</button>
+                <button id='octave-5' class='octaves octave-key-color' onmousedown='ChangeOctave(this, this.id, "mouse")' onmouseup='StopNote(this.id)' ontouchstart='PlayNote(this, this.id, "touch")' ontouchend='StopNote(this.id)' value='5'>5</button>
             </li>
             <li>
-                <button id='octave-6' class='octaves octave-key-color' onmousedown='ChangeOctave(this, this.id, "mouse")' onmouseup='StopNote(this)' ontouchstart='PlayNote(this, this.id, "touch")' ontouchend='StopNote(this)' value='6'>6</button>
+                <button id='octave-6' class='octaves octave-key-color' onmousedown='ChangeOctave(this, this.id, "mouse")' onmouseup='StopNote(this.id)' ontouchstart='PlayNote(this, this.id, "touch")' ontouchend='StopNote(this.id)' value='6'>6</button>
             </li>
             <li>
-                <button id='octave-7' class='octaves octave-key-color' onmousedown='ChangeOctave(this, this.id, "mouse")' onmouseup='StopNote(this)' ontouchstart='PlayNote(this, this.id, "touch")' ontouchend='StopNote(this)' value='7'>7</button>
+                <button id='octave-7' class='octaves octave-key-color' onmousedown='ChangeOctave(this, this.id, "mouse")' onmouseup='StopNote(this.id)' ontouchstart='PlayNote(this, this.id, "touch")' ontouchend='StopNote(this.id)' value='7'>7</button>
             </li>
         </ul>
         <ul id='one-octave' onmouseleave='Deglissing()'>
             <li>
-                <button id='C-natural' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this)' ontouchmove='Glissing(this, this.id)' value='1'>A</button>
+                <button id='C-natural' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this.id)' onmouseout='Deglissing(this.id)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this.id)' ontouchmove='Glissing(this, this.id)' ontouchcancel='Deglissing(this.id)' value='1'>A</button>
             </li>
             <li>
-                <button id='C-sharp' class='key sharp-key sharp-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this)' ontouchmove='Glissing(this, this.id)' value='2'>W</button>
+                <button id='C-sharp' class='key sharp-key sharp-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this.id)' onmouseout='Deglissing(this.id)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this.id)' ontouchmove='Glissing(this, this.id)' ontouchcancel='Deglissing(this.id)' value='2'>W</button>
             </li>
             <li>
-                <button id='D-natural' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this)' ontouchmove='Glissing(this, this.id)' value='3'>S</button>
+                <button id='D-natural' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this.id)' onmouseout='Deglissing(this.id)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this.id)' ontouchmove='Glissing(this, this.id)' ontouchcancel='Deglissing(this.id)' value='3'>S</button>
             </li>
             <li>
-                <button id='D-sharp' class='key sharp-key sharp-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this)' ontouchmove='Glissing(this, this.id)' value='4'>E</button>
+                <button id='D-sharp' class='key sharp-key sharp-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this.id)' onmouseout='Deglissing(this.id)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this.id)' ontouchmove='Glissing(this, this.id)' ontouchcancel='Deglissing(this.id)' value='4'>E</button>
             </li>
             <li>
-                <button id='E-natural' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this)' ontouchmove='Glissing(this, this.id)' value='5'>D</button>
+                <button id='E-natural' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this.id)' onmouseout='Deglissing(this.id)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this.id)' ontouchmove='Glissing(this, this.id)' ontouchcancel='Deglissing(this.id)' value='5'>D</button>
             </li>
             <li>
-                <button id='F-natural' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this)' ontouchmove='Glissing(this, this.id)' value='6'>F</button>
+                <button id='F-natural' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this.id)' onmouseout='Deglissing(this.id)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this.id)' ontouchmove='Glissing(this, this.id)' ontouchcancel='Deglissing(this.id)' value='6'>F</button>
             </li>
             <li>
-                <button id='F-sharp' class='key sharp-key sharp-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this)' ontouchmove='Glissing(this, this.id)' value='7'>T</button>
+                <button id='F-sharp' class='key sharp-key sharp-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this.id)' onmouseout='Deglissing(this.id)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this.id)' ontouchmove='Glissing(this, this.id)' ontouchcancel='Deglissing(this.id)' value='7'>T</button>
             </li>
             <li>
-                <button id='G-natural' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this)' ontouchmove='Glissing(this, this.id)' value='8'>G</button>
+                <button id='G-natural' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this.id)' onmouseout='Deglissing(this.id)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this.id)' ontouchmove='Glissing(this, this.id)' ontouchcancel='Deglissing(this.id)' value='8'>G</button>
             </li>
             <li>
-                <button id='G-sharp' class='key sharp-key sharp-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this)' ontouchmove='Glissing(this, this.id)' value='9'>Y</button>
+                <button id='G-sharp' class='key sharp-key sharp-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this.id)' onmouseout='Deglissing(this.id)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this.id)' ontouchmove='Glissing(this, this.id)' ontouchcancel='Deglissing(this.id)' value='9'>Y</button>
             </li>
             <li>
-                <button id='A-natural' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this)' ontouchmove='Glissing(this, this.id)' value='10'>H</button>
+                <button id='A-natural' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this.id)' onmouseout='Deglissing(this.id)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this.id)' ontouchmove='Glissing(this, this.id)' ontouchcancel='Deglissing(this.id)' value='10'>H</button>
             </li>
             <li>
-                <button id='A-sharp' class='key sharp-key sharp-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this)' ontouchmove='Glissing(this, this.id)' value='11'>U</button>
+                <button id='A-sharp' class='key sharp-key sharp-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this.id)' onmouseout='Deglissing(this.id)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this.id)' ontouchmove='Glissing(this, this.id)' ontouchcancel='Deglissing(this.id)' value='11'>U</button>
             </li>
             <li>
-                <button id='B-natural' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this)' ontouchmove='Glissing(this, this.id)' value='12'>J</button>
+                <button id='B-natural' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this.id)' onmouseout='Deglissing(this.id)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this.id)' ontouchmove='Glissing(this, this.id)' ontouchcancel='Deglissing(this.id)' value='12'>J</button>
             </li>
             <li>
-                <button id='C-octave' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this)' ontouchmove='Glissing(this, this.id)' value='13'>K</button>
+                <button id='C-octave' class='key natural-key natural-key-color' onmousedown='PlayNote(this, this.id)' onmouseup='StopNote(this.id)' onmouseout='Deglissing(this.id)' onmouseover='Glissing(this, this.id)' ontouchstart='PlayNote(this, this.id)' ontouchend='StopNote(this.id)' ontouchmove='Glissing(this, this.id)' ontouchcancel='Deglissing(this.id)' value='13'>K</button>
             </li>
         </ul>
     </main>
