@@ -254,12 +254,13 @@ function StopType(event) {
 function Glissing(note, idKey){
     console.log('deglissing');
     oscillatorNode.stop();
+    //problem here;
     if(downNote == 1){
         PlayNote(note, idKey);
     }
 }
 function Deglissing(idKey){
-    //downNote = 0;
+    downNote = 0;
     oscillatorNode.stop();
     StopNote(idKey);
 }
