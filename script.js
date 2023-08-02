@@ -254,11 +254,12 @@ function StopType(event) {
 function Glissing(note, idKey){
     console.log('deglissing');
     oscillatorNode.stop();
-    //problem here;
+    //problem here; Identify each note entry to kill it specifically;
     if(downNote == 1){
         PlayNote(note, idKey);
     }
 }
+    //add note to kill note
 function Deglissing(idKey){
     downNote = 0;
     oscillatorNode.stop();
