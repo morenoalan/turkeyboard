@@ -200,6 +200,7 @@ function TurnOnColor(idKey){
 
 var downNote = 0;
 function PlayNote(note, idKey){
+    timeline.push(idKey);
     console.log("playnote");
     downNote = 1;
     currentNote = note.value;
