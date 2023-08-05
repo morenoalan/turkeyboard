@@ -216,6 +216,7 @@ function PlayNote(note, idKey){
     TurnOnColor(idKey);
 }
 function StopNote(idKey){
+    //future feature: put specifications into stop()
     oscillatorNode.stop();
     downNote = 0;
     console.log('stop '+ currentNote);
